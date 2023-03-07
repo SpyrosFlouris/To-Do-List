@@ -92,6 +92,7 @@ html, body {
   height: 100vh;
   width:100%;
   left:100%;
+  padding-top: 3%;
   transition: all 0.5s ease-out;
   position: fixed;
 }
@@ -100,6 +101,7 @@ html, body {
   position: absolute;
   display: flex;
   font-size: 40px;
+  margin-left: 2%;
 }
 
 .slide_items.animate__bounceInRight{
@@ -117,10 +119,35 @@ html, body {
   cursor: pointer;
   display: flex;
   padding: 5%;
-  margin-left: 5%;
+  margin-left: 2%;
+  padding-bottom: 8rem;
+  justify-content: center;
+  position: relative;
+}
+
+#input {
+  position: fixed;
+  display:grid;
+  min-width: 250px;
+  width:300px;
+  height:80px;
+  left: 25%;
+  top: 18%;
   justify-content: center;
 }
 
+.my_input {  
+  height: 45px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+::placeholder{
+  text-align: center;
+  opacity: 100%;
+  color: black;
+  font-size: large;
+}
 
 @keyframes itemsSlide {
   100% {opacity: 100;}

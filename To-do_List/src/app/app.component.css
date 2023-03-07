@@ -8,25 +8,26 @@ html, body {
   position: static;
 }
 
-header {
-  display: flex;
-  font-size: 50px;
-  justify-content: center;
-  position: relative;
-}
-
 #container {
   background: linear-gradient(45deg, white, grey, black);
+  display: flex;
   border-style: solid;
   border-color: black;
-  border-width: 70%;
   border-radius: 15%;
-  margin-right: 70%;
-  margin-left: 30%;
-  margin-top: 10px;
+  border-width: 5px;
   min-width: 250px;
-  transform: translateY(20px);
-  position: relative;
+  width: 300px;
+  height: 80px;
+  left: 25%;
+  top: 6%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+#container #header {
+  display: flex;
+  font-size: 50px;
+  position: absolute;
 }
 
 #myButton {
@@ -36,12 +37,10 @@ header {
   padding: 0;
   width: 40px;
   height: 30px;
-  position: relative;
-  z-index: 1;
-  margin-left: 95%;
-  margin-right: 5%;
-  transform: translateY(-25px);
   position: fixed;
+  z-index: 1;
+  left: 90%;
+  top: 6%;
 }
 
 .line {
@@ -87,21 +86,20 @@ header {
 #slide_border {
   border-style: solid;
   border-width: 5px;
-  z-index: auto;
   justify-items: left;
-  margin-left: 100%;
   height: 100vh;
-  transform: translateY(-250px);
+  width: 100%;
+  left: 100%;
+  padding-top: 3%;
   transition: all 0.5s ease-out;
+  position: fixed;
 }
 
 .slide_items {
-  opacity: 100;
+  position: absolute;
   display: flex;
-  margin-top: 30%;
-  padding-left: 10%;
   font-size: 40px;
-  min-width: 350px;
+  margin-left: 2%;
 }
 
 .slide_items.animate__bounceInRight {
@@ -109,8 +107,7 @@ header {
 }
 
 #slide_border.active {
-  transform: translateY(-106px);
-  margin-left: 70%;
+  left: 80%;
   transition: all 0.5s ease-out;
 }
 
@@ -118,30 +115,43 @@ header {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-#background {
-  transform: translateY(-100vh);
-  margin-right: 70%;
-  margin-left: 15%;
-  width: 44vw;
-  height: 70vh;
-  min-width: 44vh;
-  min-height: 70vh;
-  background-position: center;
-  justify-items: center;
-}
-#background .my_input {
   display: flex;
-  margin: auto;
-  margin-top: 2.25em;
-  padding-top: 2%;
+  padding: 5%;
+  margin-left: 2%;
+  padding-bottom: 8rem;
+  justify-content: center;
+  position: relative;
 }
 
-#tasks {
-  position: absolute;
-  background-color: black;
-  margin-bottom: 2000px;
+#input {
+  position: fixed;
+  display: grid;
+  min-width: 250px;
+  width: 300px;
+  height: 80px;
+  left: 25%;
+  top: 18%;
+  justify-content: center;
+}
+
+.my_input {
+  height: 45px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+::-moz-placeholder {
+  text-align: center;
+  opacity: 100%;
+  color: black;
+  font-size: large;
+}
+
+::placeholder {
+  text-align: center;
+  opacity: 100%;
+  color: black;
+  font-size: large;
 }
 
 @keyframes itemsSlide {

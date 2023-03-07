@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent{
   title = 'To-do_List';
   isActive = false;
+  Add = false;
 
   ngOnInit(){
 
@@ -16,4 +17,6 @@ export class AppComponent{
   toggleActive(){
     this.isActive =! this.isActive;
   }
+
+  
 }

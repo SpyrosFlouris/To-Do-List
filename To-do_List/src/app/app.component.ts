@@ -9,6 +9,8 @@ export class AppComponent{
   title = 'To-do_List';
   isActive = false;
   Add = false;
+  placeholderText = "Enter text here";
+  inputDisabled = true;
 
   ngOnInit(){
 
@@ -18,5 +20,10 @@ export class AppComponent{
     this.isActive =! this.isActive;
   }
 
-  
-}
+  getUserInput(){
+    const userInput = prompt("Please enter your input:");
+    if (userInput !== null) {
+      this.placeholderText = userInput;
+      this.inputDisabled = false;
+  }
+}}

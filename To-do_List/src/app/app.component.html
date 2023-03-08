@@ -15,21 +15,17 @@
     </button>
 
     <div id="slide_border" [ngClass]="{'active': isActive == true}">
-      <button class="item_btn" ><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Add Task</li></button>
+      <button class="item_btn" (click)="getUserInput()"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Add Task</li></button>
       <button class="item_btn"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Remove Task</li></button>
       <button class="item_btn"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Options</li></button>
       <button class="item_btn"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Exit</li></button>
     </div>
 
     <div id="input">
-      <input class="my_input" type="text" placeholder="enter task" disabled size="50">
-      <input class="my_input" type="text" placeholder="enter task" disabled size="50">
-      <input class="my_input" type="text" placeholder="enter task" disabled size="50">
-      <input class="my_input" type="text" placeholder="enter task" disabled size="50">
-      <input class="my_input" type="text" placeholder="enter task" disabled size="50">
-      <input class="my_input" type="text" placeholder="enter task" disabled size="50">
-      <input class="my_input" type="text" placeholder="enter task" disabled size="50">
-      <input class="my_input" type="text" placeholder="enter task" disabled size="50">
+      <div>
+        <input class="my_input" type="text" [placeholder]="placeholderText" disabled size="50">
+      </div>
+      
     </div>
 
   </body>

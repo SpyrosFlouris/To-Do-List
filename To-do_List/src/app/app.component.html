@@ -16,14 +16,23 @@
 
     <div id="slide_border" [ngClass]="{'active': isActive == true}">
       <button class="item_btn" (click)="getUserInput()"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Add Task</li></button>
-      <button class="item_btn"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Remove Task</li></button>
+      <button class="item_btn" (click)="RemoveTask()"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Remove Task</li></button>
       <button class="item_btn"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Options</li></button>
-      <button class="item_btn"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Exit</li></button>
+      <button class="item_btn" (click)="CloseWindow()"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Exit</li></button>
     </div>
 
     <div id="input">
       <div>
-        <input class="my_input" type="text" [placeholder]="placeholderText" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText1" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText2" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText3" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText4" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText5" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText6" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText7" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText8" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText9" disabled size="50">
+        <input class="my_input" type="text" [placeholder]="placeholderText10" disabled size="50">
       </div>
       
     </div>

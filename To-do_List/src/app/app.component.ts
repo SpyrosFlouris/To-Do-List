@@ -1,3 +1,4 @@
+import { CssSelector } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,8 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent{
   title = 'To-do_List';
+
   isActive = false;
   Add = false;
+
+  gradient:string = 'linear-gradient(45deg, black, grey, white)';
+
+  Change1:boolean = false;
+  Change2:boolean = false;
+  Change3:boolean = false;
+
   placeholderText1 = "Enter text here";
   placeholderText2 = "Enter text here";
   placeholderText3 = "Enter text here";
@@ -70,7 +79,19 @@ export class AppComponent{
 RemoveTask(){
   const numberInput = prompt("Please enter the number of the task:");
   if (numberInput !== null) {
-    if (numberInput == "1") {
+    if (numberInput == "0") {
+      this.placeholderText1 = "Enter text here";
+      this.placeholderText2 = "Enter text here";
+      this.placeholderText3 = "Enter text here";
+      this.placeholderText4 = "Enter text here";
+      this.placeholderText5 = "Enter text here";
+      this.placeholderText6 = "Enter text here";
+      this.placeholderText7 = "Enter text here";
+      this.placeholderText8 = "Enter text here";
+      this.placeholderText9 = "Enter text here";
+      this.placeholderText10 = "Enter text here";
+    }
+    else if (numberInput == "1") {
       this.placeholderText1 = "Enter text here";
     }
     else if (numberInput == "2") {
@@ -109,6 +130,37 @@ RemoveTask(){
 CloseWindow(){
   window.close();
 }
+
+ToggleOptions(){
+  var oldgradient = "linear-gradient(45deg, black, grey, white)";
+  var newGradient1 = "linear-gradient(45deg,blue, skyblue)";
+  var newGradient2 = "linear-gradient(45deg,rgb(0, 95, 0), rgb(164, 213, 135))";
+  var newGradient3 = "linear-gradient(45deg,rgb(118, 3, 248), rgb(187, 76, 235))";
+
+  const option_number = prompt("Give a number between 1 and 3 and give 0 for the default colors :)");
+
+  if(option_number != null){
+    if(option_number == "0"){
+      this.gradient = oldgradient;
+    }
+    else if(option_number == "1"){
+      this.gradient = newGradient1;
+    }
+    else if(option_number == "2"){
+      this.gradient = newGradient2;
+    }
+    else if(option_number == "3"){
+      this.gradient = newGradient3;
+    }
+    else {
+      alert("wrong input!");
+      this.gradient = oldgradient;
+    }
+  }
+
+
+}
+
 
 }
 

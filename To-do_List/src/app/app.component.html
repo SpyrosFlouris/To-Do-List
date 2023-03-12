@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
   </head>
-  <body>
+  <body [style.background]="gradient">
     <div id="container">
       <header id="header">To-Do List</header>
     </div>
@@ -17,7 +17,7 @@
     <div id="slide_border" [ngClass]="{'active': isActive == true}">
       <button class="item_btn" (click)="getUserInput()"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Add Task</li></button>
       <button class="item_btn" (click)="RemoveTask()"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Remove Task</li></button>
-      <button class="item_btn"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Options</li></button>
+      <button class="item_btn" (click)="ToggleOptions()"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Options</li></button>
       <button class="item_btn" (click)="CloseWindow()"><li class="slide_items" [ngClass]="{'animate__bounceInRight': isActive == true}">Exit</li></button>
     </div>
 
